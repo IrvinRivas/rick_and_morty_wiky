@@ -12,8 +12,6 @@ body{
   display: grid;
   grid-template-columns: repeat(8,1fr);
   grid-template-rows: repeat(1,1fr);
-  min-width:100vw;
-  min-height: 100vh;
 }
 
 .content{
@@ -21,6 +19,7 @@ body{
 }
 
 header{
+  align-items: center;
   border-bottom: 1px solid lightgray;
   display: flex;
   justify-content: space-between;
@@ -40,11 +39,6 @@ header{
 
 h1{
   margin: 0;
-}
-
-.container{
-  margin: 0 auto;
-  min-height: 100vh;
 }
 
 .lightmode-btn{
@@ -200,4 +194,127 @@ h1{
   color: white;
   height: 41px;
   width: 100px;
+}
+
+@media(max-width:1025px){
+  #root{
+    width: 400vw;
+  }
+}
+
+@media(max-width:769px){
+  #root{
+    min-height: 100vh;
+  }
+
+  header{
+    font-size: 3em;
+    height: 250px;
+  }
+  .character-card{
+    font-size: 2em;
+    height: 1000px;
+    width: 700px;
+  }
+
+  .card-img{
+    width: 700px;
+  }
+
+  .lightmode-btn{
+    font-size: 1.5em;
+    height: 100px;
+    width: 500px;
+  }
+  
+  .darkmode-btn{
+    font-size: 1.5em;
+    height: 100px;
+    width: 500px;
+  }
+
+  .search{
+    width: 1800px;
+  }
+
+  .search-input{
+    font-size: 5em;
+    height: 200px;
+    width: 90%;
+  }
+
+  .favorites{
+    font-size: 3em;
+  }
+
+  .favorite-item{
+    height: 200px;
+    font-size: 2em;
+    margin: 30px 0;
+    width: 900px;
+  }
+
+  .plus-icon{
+    height: 100px;
+    width: 100px;
+  }
+
+  .character-card:hover > .character-card__text{
+    bottom: 700px;
+  }
+
+}
+
+
+@media(max-width:426px){
+  #root{
+    font-size: 2em;
+    width:328vw;
+  }
+
+  header{
+    font-size: 1em;
+  }
+
+  #content{
+    grid-column: 1/8;
+    margin-right: 200px;
+  }
+  .search{
+    width: 900px;
+  }
+
+  .search-input{
+    font-size: 2em;
+    height: 100px;
+    width: 90%;
+  }
+
+  .favorite-item{
+    width: 700px;
+  }
+
+  .character-card{
+    font-size: 2em;
+    height: 1000px;
+    width: 850px;
+  }
+
+  .card-img{
+    width: 850px;
+  }
+
+  .character-card:hover > .character-card__text{
+    bottom: 1000px;
+  }
+  .plus-icon{
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media(max-width:326px){
+  #root{
+    width: 380vw;
+  }
 }
