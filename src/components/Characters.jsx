@@ -74,9 +74,11 @@ const Characters = () => {
             {favorites.favorites.length > 0 ?
                 <div>
                     <h1>Tus favoritos</h1>
+                    <div className="favorites_carrousel">
                         {favorites.favorites.map((favorite,i) => (
-                            <li key={i} className="favorite-item">{favorite.name}</li>
+                                <img key={i} className="favorite-img" src={favorite.image}/>
                         ))}
+                    </div>
                 </div>
                 :
                 <h1>Añade a tus personajes favoritos</h1>
