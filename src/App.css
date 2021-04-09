@@ -1,38 +1,168 @@
-.App {
+body{
+  margin: 0;
+  padding: 0;
+  color: #6EEB83;
+}
+
+.light-theme{
+  background-color: white;
+}
+
+.dark-theme{
+  background-color: #04151F;
+}
+
+
+h1{
+  margin: 0;
+}
+
+.container{
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 1080px;
+}
+
+header{
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+.lightmode-btn{
+  background-color: white;
+  border: 2px solid #6EEB83;
+  border-radius: 10px;
+  color: #6EEB83;
+  outline: none;
+}
+
+.darkmode-btn{
+  background-color: #04151F;
+  border: 2px solid #6EEB83;
+  border-radius: 10px;
+  color: #6EEB83;
+  outline: none;
+}
+
+/* characters */
+
+.characters{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top:30px;
+}
+
+.character-card{
+  box-shadow: 1px 1px 10px 1px gray;
+  box-sizing: border-box;
+  border-radius: 10px;
+  height: 380px;
+  width: 300px;
+  margin: 30px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.character-card h2{
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.character-card__text{
+  display: none;
+  transition: all 1s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.card-img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-name{
+  color: #6EEB83;
+  margin-right: 30px;
+  text-shadow: 1px 1px 1px gray;
+}
+
+.character-card:hover{
+  box-shadow: 1px 1px 10px 1px #6EEB83 ;
+}
+
+.character-card:hover > .card-img{
+  opacity: 0.1;
+}
+
+.character-card:hover > .character-card__text{
+  bottom: 300px;
+  display: block;
+  position: relative;
+}
+
+.plus-icon__container{
   align-items: center;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.plus-icon{
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
+
+.plus-icon__message{
+  
+  display:none ;
+  
+}
+
+.plus-icon:hover > .plus-icon__message{
+  background-color:#6EEB83;
+  border: none;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  bottom: 30px;
   color: white;
+  display: block;
+  height: 30px;
+  left: 170px;
+  position: relative;
+  width: 130px;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* favorites */
+
+
+/* search */
+
+.search{
+  margin: 30px auto;
+  width: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-input{
+  border: 1px solid lightgray;
+  /* border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  border-radius: 10px;
+  height: 35px;
+  outline:none;
+  padding: 2px 20px;
+  width: 500px;
+}
+
+
+.search-input:focus{
+  box-shadow: 1px 1px 10px 1px #6EEB83;
+}
+
+.search-btn{
+  background-color: #6EEB83;
+  border:none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  height: 41px;
+  width: 100px;
 }

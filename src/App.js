@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ThemeContext from './context/ThenContext';
+import Header from './components/Header';
+import Characters from './components/Characters';
+
+
 
 function App() {
+
+  const [theme, setTheme]= useState('ligth-theme')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{theme, setTheme }}>
+      <div className={theme}>
+        <Header/>
+        <div className="container">
+          <Characters/>
+        </div>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
