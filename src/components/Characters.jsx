@@ -93,7 +93,7 @@ const Characters = () => {
                         <p><strong>Estado:</strong> {character.status}</p>
                         <p><strong>Origen:</strong> {character.origin.name}</p>
                         <p><strong>Especie:</strong> {character.species}</p>
-                        <p><strong>Estado:</strong> {character.gender}</p>
+                        <p><strong>Genero:</strong> {character.gender}</p>
                         <img 
                             src={plusIcon} 
                             alt="" 
