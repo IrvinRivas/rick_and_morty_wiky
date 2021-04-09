@@ -13,7 +13,7 @@ const Header = () => {
 
     return(
         <header>
-            <h1>ReactHooks</h1>
+            <h1>Mini wiki Rick and Morty</h1>
             <button
             className={darkMode ? 'darkmode-btn' : 'lightmode-btn'}
             id="darkmode"

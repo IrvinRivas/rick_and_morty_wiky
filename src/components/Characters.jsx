@@ -33,13 +33,16 @@ const Characters = () => {
     
 
     const handleClick = favorite => {
+
+        let newF = favorite
+
         for (let i = 0; i < favorites.favorites.length; i++) {
             if (favorites.favorites[i].id === favorite.id) {
-                return false;
+                return false
             } 
         }
 
-        dispatch({ type: 'ADD_TO_FAVORITE', payload: favorite})
+        dispatch({ type: 'ADD_TO_FAVORITE', payload: newF})
     }
 
     /* const handleSearch = () => {
@@ -67,16 +70,18 @@ const Characters = () => {
 
         <Search search={search} searchInput={searchInput} handleSearch={handleSearch}/>
 
-        {favorites.favorites.length > 0 ?
-            <div className="favorites">
-                <h1>Tus favoritos</h1>
-                {favorites.favorites.map(favorite => (
-                    <li key={'favorite'+favorite.id}>{favorite.name}</li>
-                ))}
-            </div>
-            :
-            <h1>Añade a tus personajes favoritos</h1>
-        }
+        <div className="favorites">
+            {favorites.favorites.length > 0 ?
+                <div>
+                    <h1>Tus favoritos</h1>
+                        {favorites.favorites.map((favorite,i) => (
+                            <li key={i} className="favorite-item">{favorite.name}</li>
+                        ))}
+                </div>
+                :
+                <h1>Añade a tus personajes favoritos</h1>
+            }
+        </div>
 
         <div className="characters">
             {filteredUsers.map(character => (
